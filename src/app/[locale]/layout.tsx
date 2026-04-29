@@ -6,6 +6,11 @@ import { DemoBadge } from '@/components/DemoBadge';
 import { routing } from '@/libs/I18nRouting';
 import '@/styles/global.css';
 
+export const baseUrl =
+  process.env.NODE_ENV === 'production'
+    ? 'https://api.bigcartel.com'
+    : 'https://api.bigcartel.com';
+
 export const metadata: Metadata = {
   icons: [
     {
