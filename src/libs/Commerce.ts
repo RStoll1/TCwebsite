@@ -16,9 +16,9 @@ export type RawBigCartelProductImage = {
 export type RawBigCartelProduct = {
   id: number;
   name: string;
-  description: string | null;
   price: number;
   images: RawBigCartelProductImage[];
+  url: string;
 };
 
 export const handleServerResponse = async <T>(res: Response): Promise<T> => {
@@ -34,9 +34,9 @@ export const handleServerResponse = async <T>(res: Response): Promise<T> => {
 export const mapProductData = (data: RawBigCartelProduct): Product => ({
   id: data.id,
   name: data.name,
-  description: data.description,
   price: data.price,
   images: data.images[0]?.url ?? '',
+url: `https://tensbychase.bigcartel.com${data.url}`,
 });
 
 export const getProducts = async (): Promise<Product[]> => {

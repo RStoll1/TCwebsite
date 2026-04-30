@@ -9,6 +9,13 @@ const baseConfig: NextConfig = {
   devIndicators: {
     position: 'bottom-right',
   },
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'assets.bigcartel.com' },
+      { protocol: 'https', hostname: '**.bigcartel.com' },
+      { protocol: 'https', hostname: '**.cloudfront.net' },
+    ],
+  },
   poweredByHeader: false,
   reactStrictMode: true,
   reactCompiler: process.env.NODE_ENV === 'production', // Keep the development environment fast

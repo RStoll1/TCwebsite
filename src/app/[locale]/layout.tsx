@@ -1,43 +1,38 @@
-import type { Metadata, Viewport } from 'next';
-import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { DemoBadge } from '@/components/DemoBadge';
-import { routing } from '@/libs/I18nRouting';
-import '@/styles/global.css';
-
-export const baseUrl =
-  process.env.NODE_ENV === 'production'
-    ? 'https://api.bigcartel.com'
-    : 'https://api.bigcartel.com';
+import type { Metadata, Viewport } from "next";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { DemoBadge } from "@/components/DemoBadge";
+import { routing } from "@/libs/I18nRouting";
+import "@/styles/global.css";
 
 export const metadata: Metadata = {
   icons: [
     {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
+      rel: "apple-touch-icon",
+      url: "/apple-touch-icon.png",
     },
     {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: '/favicon-32x32.png',
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      url: "/favicon-32x32.png",
     },
     {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      url: '/favicon-16x16.png',
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      url: "/favicon-16x16.png",
     },
     {
-      rel: 'icon',
-      url: '/favicon.ico',
+      rel: "icon",
+      url: "/favicon.ico",
     },
   ],
 };
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
 };
 
