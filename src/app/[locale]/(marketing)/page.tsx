@@ -28,7 +28,7 @@ export default async function Index(props: IndexPageProps) {
   console.log(products);
   setRequestLocale(locale);
   return (
-    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="mx-auto grid w-full grid-cols-[repeat(auto-fit,minmax(16rem,20rem))] justify-center gap-6">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

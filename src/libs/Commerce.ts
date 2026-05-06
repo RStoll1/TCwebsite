@@ -36,7 +36,7 @@ export const mapProductData = (data: RawBigCartelProduct): Product => ({
   name: data.name,
   price: data.price,
   images: data.images[0]?.url ?? '',
-url: `https://tensbychase.bigcartel.com${data.url}`,
+  url: `https://tensbychase.bigcartel.com${data.url}`,
 });
 
 export const getProducts = async (): Promise<Product[]> => {

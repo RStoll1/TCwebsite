@@ -1,3 +1,22 @@
 @layer theme, base, clerk, components, utilities; /* Ensure Clerk is compatible with Tailwind CSS v4 */
 
 @import 'tailwindcss';
+
+/* Global styles */
+@layer base {
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/assets/images/backgroundimg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+  }
+}
