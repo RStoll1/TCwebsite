@@ -1,7 +1,15 @@
+export type ProductOption = {
+  id: number;
+  name: string;
+  price: number;
+  soldOut: boolean;
+};
+
 export type Product = {
   id: number;
   name: string;
   price: number;
-  images: string;
+  image: string;
   url: string;
+  options: ProductOption[];
 };

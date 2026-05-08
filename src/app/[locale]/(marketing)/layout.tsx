@@ -26,9 +26,6 @@ export default async function Layout(props: {
               <li>
                 <Link href="/about">{t('about_link')}</Link>
               </li>
-              <li>
-                <Link href="/portfolio">{t('portfolio_link')}</Link>
-              </li>
             </ul>
           </nav>
         </div>

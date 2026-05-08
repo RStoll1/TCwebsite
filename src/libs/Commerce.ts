@@ -1,4 +1,4 @@
-import type { Product } from '../types/products';
+import type { Product } from '@/types/products';
 
 export const baseUrl = 'https://api.bigcartel.com';
 
@@ -19,6 +19,20 @@ export type RawBigCartelProduct = {
   price: number;
   images: RawBigCartelProductImage[];
   url: string;
+  options: RawBigCartelProductOption[];
+};
+
+export type RawBigCartelProductOption = {
+  id: number;
+  price: number;
+  name: string;
+  sold_out: boolean;
+};
+
+export type RawBigCartelOptionGroupValue = {
+  id: number;
+  option_group_id: number;
+  name: string;
 };
 
 export const handleServerResponse = async <T>(res: Response): Promise<T> => {
@@ -35,8 +49,14 @@ export const mapProductData = (data: RawBigCartelProduct): Product => ({
   id: data.id,
   name: data.name,
   price: data.price,
-  images: data.images[0]?.url ?? '',
+  image: data.images[0]?.url ?? '',
   url: `https://tensbychase.bigcartel.com${data.url}`,
+  options: data.options.map((option) => ({
+    id: option.id,
+    name: option.name,
+    price: option.price,
+    soldOut: option.sold_out,
+  })),
 });
 
 export const getProducts = async (): Promise<Product[]> => {
