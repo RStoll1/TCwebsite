@@ -11,15 +11,15 @@
     "main_navigation_label": "Main navigation"
   },
   "Index": {
-    "meta_title": "Next.js Boilerplate Presentation",
-    "meta_description": "Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework.",
+    "meta_title": "Tensby Chase Merch",
+    "meta_description": "NWelcome to the official Tensby Chase Merch store!",
     "sponsors_title": "Sponsors",
     "zap_emoji_label": "Zap"
   },
   "About": {
     "meta_title": "About",
     "meta_description": "About page description",
-    "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
+    "about_paragraph": "",
     "translation_powered_by": "Translation powered by"
   },
   "SignIn": {

@@ -19,7 +19,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const selectedOption = product.options.find((o) => o.id === selectedSize);
 
   return (
-    <div className="w-full max-w-sm rounded-md border-4 border-black bg-black/25 p-5 backdrop-blur-sm transition duration-300 hover:scale-101 hover:transform hover:shadow-[0_0_20px_rgba(34,197,94,0.5)]">
+    <div className="w-full max-w-sm rounded-md border-4 border-black bg-black/25 p-5 text-white backdrop-blur-sm transition duration-300 hover:scale-101 hover:transform hover:shadow-[0_0_20px_rgba(34,197,94,0.5)]">
       <div className="relative mb-4 h-72 w-full cursor-pointer overflow-hidden rounded-lg transition duration-200 hover:scale-101">
         <Lightbox
           open={openImage}
