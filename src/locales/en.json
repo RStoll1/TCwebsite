@@ -2,6 +2,7 @@
   "RootLayout": {
     "home_link": "Home",
     "about_link": "About",
+    "youtube_link": "YouTube",
     "sign_in_link": "Sign in",
     "sign_up_link": "Sign up"
   },
@@ -12,7 +13,7 @@
   },
   "Index": {
     "meta_title": "Tensby Chase Merch",
-    "meta_description": "NWelcome to the official Tensby Chase Merch store!",
+    "meta_description": "Welcome to the official Tensby Chase Merch store!",
     "sponsors_title": "Sponsors",
     "zap_emoji_label": "Zap"
   },
@@ -21,6 +22,10 @@
     "meta_description": "About page description",
     "about_paragraph": "",
     "translation_powered_by": "Translation powered by"
+  },
+  "YouTube": {
+    "meta_title": "YouTube",
+    "meta_description": "YouTube page description"
   },
   "SignIn": {
     "meta_title": "Sign in",

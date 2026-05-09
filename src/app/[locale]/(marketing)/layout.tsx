@@ -1,13 +1,13 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Link } from '@/libs/I18nNavigation';
-import { AppConfig } from '@/utils/AppConfig';
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Link } from "@/libs/I18nNavigation";
+import { AppConfig } from "@/utils/AppConfig";
 
 export default async function Layout(props: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await props.params;
-  const t = await getTranslations({ locale, namespace: 'RootLayout' });
+  const t = await getTranslations({ locale, namespace: "RootLayout" });
   setRequestLocale(locale);
 
   return (
@@ -28,16 +28,26 @@ export default async function Layout(props: {
                   className="relative !text-white drop-shadow-[0_0_8px_rgba(34,197,94,1.2)] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-green-500 after:transition-all hover:after:w-full"
                   href="/"
                 >
-                  {t('home_link')}
+                  {t("home_link")}
                 </Link>
               </li>
               <li>
                 <Link
-                  className="relative !text-white drop-shadow-[0_0_8px_rgba(34,197,94,1.2)] after:absolute after:right-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-green-500 after:transition-all hover:after:w-full"
+                  className="relative !text-white drop-shadow-[0_0_8px_rgba(34,197,94,1.2)] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-green-500 after:transition-all hover:after:w-full"
                   href="/about"
                 >
-                  {t('about_link')}
+                  {t("about_link")}
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/@TensbyChase-j8k"
+                  target="blank"
+                  rel="noreferrer"
+                  className="relative !text-white drop-shadow-[0_0_8px_rgba(34,197,94,1.2)] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-green-500 after:transition-all hover:after:w-full"
+                >
+                  {t("youtube_link")}
+                </a>
               </li>
             </ul>
           </nav>

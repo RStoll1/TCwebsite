@@ -9,7 +9,7 @@ const localePrefix: LocalePrefixMode = 'as-needed';
 export const AppConfig = {
   name: 'TCHC Merch',
   i18n: {
-    locales: ['en', 'fr'],
+    locales: ['en'],
     defaultLocale: 'en',
     localePrefix,
   },
