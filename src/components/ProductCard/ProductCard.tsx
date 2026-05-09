@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import type { Product } from "@/types/products";
-import "yet-another-react-lightbox/styles.css";
+import Image from 'next/image';
+import { useState } from 'react';
+import Lightbox from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import type { Product } from '@/types/products';
+import 'yet-another-react-lightbox/styles.css';
 
 export type ProductCardProps = {
   product: Product;
@@ -14,7 +14,7 @@ export type ProductCardProps = {
 export const ProductCard = ({ product }: ProductCardProps) => {
   const [openImage, setOpenImage] = useState(false);
   const [selectedSize, setSelectedSize] = useState<number | undefined>(
-    product.options.find((o) => !o.soldOut)?.id,
+    product.options.find((o) => !o.soldOut)?.id
   );
   const selectedOption = product.options.find((o) => o.id === selectedSize);
 
@@ -30,7 +30,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           plugins={[Zoom]}
           animation={{ fade: 100, swipe: 0 }}
           zoom={{ minZoom: 1, maxZoom: 2 }}
-          toolbar={{ buttons: ["zoomIn", "zoomOut", "close"] }}
+          toolbar={{ buttons: ['zoomIn', 'zoomOut', 'close'] }}
         />
         <Image
           src={product.image}
@@ -69,15 +69,17 @@ export const ProductCard = ({ product }: ProductCardProps) => {
                 value={option.id}
                 disabled={option.soldOut}
               >
-                {option.name} {option.soldOut ? "(Sold Out)" : ""}
+                {option.name} {option.soldOut ? '(Sold Out)' : ''}
               </option>
             ))}
           </select>
         </div>
-        <input type="hidden" name="cart[add][id]" value={selectedSize ?? ""} />
+        <input type="hidden" name="cart[add][id]" value={selectedSize ?? ''} />
         <button
           type="submit"
-          disabled={selectedSize === undefined || selectedOption?.soldOut === true}
+          disabled={
+            selectedSize === undefined || selectedOption?.soldOut === true
+          }
           className="mt-4 flex w-full justify-center rounded bg-black px-4 py-2 text-white transition duration-200 hover:scale-105 hover:transform hover:bg-[rgb(34,197,94,0.5)]"
         >
           Buy
